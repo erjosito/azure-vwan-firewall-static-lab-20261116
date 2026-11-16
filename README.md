@@ -105,8 +105,11 @@ No timeout, assertion or production budget was relaxed.
 passed both `validate` and `desktop` on PR source
 `a3256cfe8da787970b16603fcc6702c964bdf584`, including the full browser suite,
 collector tests, production-artifact smoke and packaged offline/desktop-network
-checks. The PR remains unmerged; no new application release or deployment is
-claimed.
+checks. The PR was merged into `main` on 2026-11-16 as
+`9c23238b10d8b2775dd5fa88ff0fa880ab3bcf8a`.
+[Post-merge validation and deployment](https://github.com/erjosito/vwan-visual-topology/actions/runs/43957623713)
+are tracked separately from the original experiment. No new desktop release was
+created, and this merge does not close the Firewall-log qualification gap.
 
 ## Instrumentation limits and retained disagreements
 
