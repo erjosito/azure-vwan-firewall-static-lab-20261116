@@ -1,0 +1,180 @@
+{
+  "version": 2,
+  "kind": "azure-network-topology",
+  "name": "Selective Firewall: published-branch",
+  "vnets": [
+    {
+      "id": "trusted-a",
+      "name": "trusted-a",
+      "region": "swedencentral",
+      "role": "spoke-vnet",
+      "prefixes": [
+        "10.10.0.0/16"
+      ],
+      "subnets": [
+        {
+          "id": "sub-trusted-a",
+          "name": "Workloads",
+          "prefix": "10.10.0.0/24"
+        }
+      ],
+      "gateways": [],
+      "appliances": [],
+      "vwanHubAttachment": {
+        "hubId": "hub-local",
+        "enabled": true,
+        "hubRouting": {
+          "status": "configured",
+          "associatedTableId": "trusted",
+          "propagatedTableIds": [
+            "trusted",
+            "defaultRouteTable"
+          ],
+          "labels": []
+        }
+      }
+    },
+    {
+      "id": "trusted-b",
+      "name": "trusted-b",
+      "region": "swedencentral",
+      "role": "spoke-vnet",
+      "prefixes": [
+        "10.20.0.0/16"
+      ],
+      "subnets": [
+        {
+          "id": "sub-trusted-b",
+          "name": "Workloads",
+          "prefix": "10.20.0.0/24"
+        }
+      ],
+      "gateways": [],
+      "appliances": [],
+      "vwanHubAttachment": {
+        "hubId": "hub-local",
+        "enabled": true,
+        "hubRouting": {
+          "status": "configured",
+          "associatedTableId": "trusted",
+          "propagatedTableIds": [
+            "trusted",
+            "defaultRouteTable"
+          ],
+          "labels": []
+        }
+      }
+    },
+    {
+      "id": "untrusted-a",
+      "name": "untrusted-a",
+      "region": "swedencentral",
+      "role": "spoke-vnet",
+      "prefixes": [
+        "10.30.0.0/16"
+      ],
+      "subnets": [
+        {
+          "id": "sub-untrusted-a",
+          "name": "Workloads",
+          "prefix": "10.30.0.0/24"
+        }
+      ],
+      "gateways": [],
+      "appliances": [],
+      "vwanHubAttachment": {
+        "hubId": "hub-local",
+        "enabled": true,
+        "hubRouting": {
+          "status": "configured",
+          "associatedTableId": "defaultRouteTable",
+          "propagatedTableIds": [
+            "noneRouteTable"
+          ],
+          "labels": []
+        }
+      }
+    }
+  ],
+  "vnetPeerings": [],
+  "udrTables": [],
+  "vwanHubs": [
+    {
+      "id": "hub-local",
+      "name": "Local secure hub",
+      "region": "swedencentral",
+      "preference": "ExpressRoute",
+      "firewall": {
+        "id": "fw-local",
+        "name": "Original local Firewall"
+      },
+      "routingIntent": {
+        "private": false,
+        "internet": false,
+        "privatePrefixes": []
+      },
+      "routeTables": [
+        {
+          "id": "defaultRouteTable",
+          "name": "Default",
+          "labels": [
+            "default"
+          ],
+          "staticRoutes": [
+            {
+              "name": "inspect-private",
+              "destinationType": "CIDR",
+              "destinations": [
+                "10.0.0.0/8"
+              ],
+              "nextHopType": "ResourceId",
+              "nextHop": "fw-local"
+            }
+          ]
+        },
+        {
+          "id": "trusted",
+          "name": "Trusted",
+          "labels": [
+            "trusted"
+          ],
+          "staticRoutes": [
+            {
+              "name": "inspect-private",
+              "destinationType": "CIDR",
+              "destinations": [
+                "10.0.0.0/8"
+              ],
+              "nextHopType": "ResourceId",
+              "nextHop": "fw-local"
+            }
+          ]
+        },
+        {
+          "id": "untrusted",
+          "name": "Untrusted",
+          "labels": [
+            "untrusted"
+          ],
+          "staticRoutes": [
+            {
+              "name": "inspect-private",
+              "destinationType": "CIDR",
+              "destinations": [
+                "10.0.0.0/8"
+              ],
+              "nextHopType": "ResourceId",
+              "nextHop": "fw-local"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "erLocations": [],
+  "erLinks": [],
+  "erGlobalReachLinks": [],
+  "sites": [],
+  "vpnConnections": [],
+  "siteLinks": []
+}

@@ -1,0 +1,60 @@
+#cloud-config
+write_files:
+  - path: /opt/fw177-echo.py
+    permissions: '0755'
+    content: |
+      import concurrent.futures
+      import datetime
+      import json
+      import socket
+      import threading
+
+      lock = threading.Lock()
+
+      def receipt(protocol, port, remote, data):
+          with lock, open('/var/log/fw177-receipts.jsonl', 'a', buffering=1) as log:
+              log.write(json.dumps({
+                  'utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  'protocol': protocol, 'port': port, 'remote': remote,
+                  'nonce': data.decode('ascii', errors='replace')
+              }, separators=(',', ':')) + '\n')
+
+      def serve(protocol, port):
+          kind = socket.SOCK_STREAM if protocol == 'tcp' else socket.SOCK_DGRAM
+          with socket.socket(socket.AF_INET, kind) as listener:
+              listener.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+              listener.bind(('0.0.0.0', port))
+              if protocol == 'tcp':
+                  listener.listen(32)
+              while True:
+                  if protocol == 'tcp':
+                      peer, remote = listener.accept()
+                      with peer:
+                          peer.settimeout(4)
+                          try:
+                              data = peer.recv(256)
+                              receipt(protocol, port, remote, data)
+                              peer.sendall(data)
+                          except OSError:
+                              pass
+                  else:
+                      data, remote = listener.recvfrom(256)
+                      receipt(protocol, port, remote, data)
+                      listener.sendto(data, remote)
+
+      with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+          list(pool.map(lambda item: serve(*item),
+                        [('tcp', 18080), ('tcp', 18081), ('udp', 18082), ('udp', 18083)]))
+  - path: /etc/systemd/system/fw177-echo.service
+    content: |
+      [Unit]
+      Description=Synthetic Firewall qualification echo endpoints
+      After=network.target
+      [Service]
+      ExecStart=/usr/bin/python3 /opt/fw177-echo.py
+      Restart=on-failure
+      [Install]
+      WantedBy=multi-user.target
+runcmd:
+  - systemctl daemon-reload
+  - systemctl enable --now fw177-echo.service

@@ -1,0 +1,10 @@
+{
+  "value": [
+    {
+      "code": "ProvisioningState/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": "Enable succeeded: \n[stdout]\n{\"kind\":\"receipt\",\"endpoint\":\"untrusted-a\",\"utc\":\"2026-11-16T19:55:10.095015+00:00\",\"protocol\":\"udp\",\"port\":18082,\"remote\":[\"10.10.0.4\",43150],\"nonce\":\"published-branch:trusted-a:untrusted-a:18082:1794858910091876532\"}\n{\"kind\":\"receipt\",\"endpoint\":\"untrusted-a\",\"utc\":\"2026-11-16T19:55:13.175936+00:00\",\"protocol\":\"udp\",\"port\":18082,\"remote\":[\"10.20.0.4\",35077],\"nonce\":\"published-branch:trusted-b:untrusted-a:18082:1794858913173938926\"}\n\n[stderr]\n"
+    }
+  ]
+}

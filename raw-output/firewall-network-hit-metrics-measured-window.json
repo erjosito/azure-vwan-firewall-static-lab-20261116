@@ -1,0 +1,256 @@
+{
+  "cost": 56,
+  "interval": "PT1M",
+  "namespace": "Microsoft.Network/azureFirewalls",
+  "resourceregion": "swedencentral",
+  "timespan": "2026-11-16T19:20:00Z/2026-11-16T20:17:01Z",
+  "value": [
+    {
+      "displayDescription": "Number of times Network rules were hit",
+      "errorCode": "Success",
+      "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/azureFirewalls/fw-fw177/providers/Microsoft.Insights/metrics/NetworkRuleHit",
+      "name": {
+        "localizedValue": "Network rules hit count",
+        "value": "NetworkRuleHit"
+      },
+      "resourceGroup": "rg-fw177-20261116-4cf83a",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "timeStamp": "2026-11-16T19:20:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:21:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:22:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:23:00Z",
+              "total": 8.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:24:00Z",
+              "total": 7.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:25:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:26:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:27:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:28:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:29:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:30:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:31:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:32:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:33:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:34:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:35:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:36:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:37:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:38:00Z",
+              "total": 38.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:39:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:40:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:41:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:42:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:43:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:44:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:45:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:46:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:47:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:48:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:49:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:50:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:51:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:52:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:53:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:54:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:55:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:56:00Z",
+              "total": 28.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:57:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:58:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T19:59:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:00:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:01:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:02:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:03:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:04:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:05:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:06:00Z",
+              "total": 17.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:07:00Z",
+              "total": 31.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:08:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:09:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:10:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:11:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:12:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:13:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:14:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:15:00Z",
+              "total": 10.0
+            },
+            {
+              "timeStamp": "2026-11-16T20:16:00Z",
+              "total": 10.0
+            }
+          ],
+          "metadatavalues": []
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Count"
+    }
+  ]
+}

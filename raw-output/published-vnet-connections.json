@@ -1,0 +1,110 @@
+[
+  {
+    "allowHubToRemoteVnetTransit": true,
+    "allowRemoteVnetToUseHubVnetGateways": true,
+    "enableInternetSecurity": false,
+    "etag": "W/\"[REDACTED-GUID]\"",
+    "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubVirtualNetworkConnections/conn-trusted-a",
+    "name": "conn-trusted-a",
+    "provisioningState": "Succeeded",
+    "remoteVirtualNetwork": {
+      "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualNetworks/vnet-trusted-a",
+      "resourceGroup": "rg-fw177-20261116-4cf83a"
+    },
+    "resourceGroup": "rg-fw177-20261116-4cf83a",
+    "routingConfiguration": {
+      "associatedRouteTable": {
+        "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/trusted",
+        "resourceGroup": "rg-fw177-20261116-4cf83a"
+      },
+      "propagatedRouteTables": {
+        "ids": [
+          {
+            "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/trusted",
+            "resourceGroup": "rg-fw177-20261116-4cf83a"
+          }
+        ],
+        "labels": []
+      },
+      "vnetRoutes": {
+        "staticRoutes": [],
+        "staticRoutesConfig": {
+          "propagateStaticRoutes": true,
+          "vnetLocalRouteOverrideCriteria": "Contains"
+        }
+      }
+    }
+  },
+  {
+    "allowHubToRemoteVnetTransit": true,
+    "allowRemoteVnetToUseHubVnetGateways": true,
+    "enableInternetSecurity": false,
+    "etag": "W/\"[REDACTED-GUID]\"",
+    "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubVirtualNetworkConnections/conn-trusted-b",
+    "name": "conn-trusted-b",
+    "provisioningState": "Succeeded",
+    "remoteVirtualNetwork": {
+      "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualNetworks/vnet-trusted-b",
+      "resourceGroup": "rg-fw177-20261116-4cf83a"
+    },
+    "resourceGroup": "rg-fw177-20261116-4cf83a",
+    "routingConfiguration": {
+      "associatedRouteTable": {
+        "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/trusted",
+        "resourceGroup": "rg-fw177-20261116-4cf83a"
+      },
+      "propagatedRouteTables": {
+        "ids": [
+          {
+            "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/trusted",
+            "resourceGroup": "rg-fw177-20261116-4cf83a"
+          }
+        ],
+        "labels": []
+      },
+      "vnetRoutes": {
+        "staticRoutes": [],
+        "staticRoutesConfig": {
+          "propagateStaticRoutes": true,
+          "vnetLocalRouteOverrideCriteria": "Contains"
+        }
+      }
+    }
+  },
+  {
+    "allowHubToRemoteVnetTransit": true,
+    "allowRemoteVnetToUseHubVnetGateways": true,
+    "enableInternetSecurity": false,
+    "etag": "W/\"[REDACTED-GUID]\"",
+    "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubVirtualNetworkConnections/conn-untrusted-a",
+    "name": "conn-untrusted-a",
+    "provisioningState": "Succeeded",
+    "remoteVirtualNetwork": {
+      "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualNetworks/vnet-untrusted-a",
+      "resourceGroup": "rg-fw177-20261116-4cf83a"
+    },
+    "resourceGroup": "rg-fw177-20261116-4cf83a",
+    "routingConfiguration": {
+      "associatedRouteTable": {
+        "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/defaultRouteTable",
+        "resourceGroup": "rg-fw177-20261116-4cf83a"
+      },
+      "propagatedRouteTables": {
+        "ids": [
+          {
+            "id": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/noneRouteTable",
+            "resourceGroup": "rg-fw177-20261116-4cf83a"
+          }
+        ],
+        "labels": []
+      },
+      "vnetRoutes": {
+        "staticRoutes": [],
+        "staticRoutesConfig": {
+          "propagateStaticRoutes": true,
+          "vnetLocalRouteOverrideCriteria": "Contains"
+        }
+      }
+    }
+  }
+]

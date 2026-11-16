@@ -1,0 +1,6 @@
+flowchart LR
+  A["published-vnet: both cross-domain directions inspect; 16/24 echoes"]
+  B["published-branch: untrusted-to-trusted bypasses; 10/24 echoes"]
+  C["separate-untrusted: both cross-domain directions inspect; 16/24 echoes"]
+  A -->|"Add trusted /16s to Default"| B
+  B -->|"Move untrusted source to its own table"| C

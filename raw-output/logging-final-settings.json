@@ -1,0 +1,150 @@
+[
+  {
+    "id": "/subscriptions/[REDACTED-GUID]/resourcegroups/rg-fw177-20261116-4cf83a/providers/microsoft.network/azurefirewalls/fw-fw177/providers/microsoft.insights/diagnosticSettings/lab-network-rules",
+    "logAnalyticsDestinationType": "Dedicated",
+    "logs": [
+      {
+        "category": "AzureFirewallNetworkRule",
+        "enabled": true,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWNetworkRule",
+        "enabled": true,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AzureFirewallApplicationRule",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AzureFirewallDnsProxy",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWApplicationRule",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWNatRule",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWThreatIntel",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWIdpsSignature",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWDnsQuery",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWFqdnResolveFailure",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWFatFlow",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWFlowTrace",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWApplicationRuleAggregation",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWNetworkRuleAggregation",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWNatRuleAggregation",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWDnsAdditional",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      }
+    ],
+    "metrics": [
+      {
+        "category": "AllMetrics",
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      }
+    ],
+    "name": "lab-network-rules",
+    "resourceGroup": "rg-fw177-20261116-4cf83a",
+    "type": "Microsoft.Insights/diagnosticSettings",
+    "workspaceId": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.OperationalInsights/workspaces/logs-fw177-pyyz4umgehhu6"
+  }
+]

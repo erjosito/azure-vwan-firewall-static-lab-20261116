@@ -1,0 +1,10 @@
+{
+  "value": [
+    {
+      "code": "ProvisioningState/succeeded",
+      "displayStatus": "Provisioning succeeded",
+      "level": "Info",
+      "message": "Enable succeeded: \n[stdout]\n{\"kind\":\"receipt\",\"endpoint\":\"untrusted-a\",\"utc\":\"2026-11-16T19:37:05.851870+00:00\",\"protocol\":\"tcp\",\"port\":18080,\"remote\":[\"10.20.0.4\",51923],\"nonce\":\"published-vnet:trusted-b:untrusted-a:18080:1794857825847849770\"}\n{\"kind\":\"receipt\",\"endpoint\":\"untrusted-a\",\"utc\":\"2026-11-16T19:37:08.261309+00:00\",\"protocol\":\"tcp\",\"port\":18080,\"remote\":[\"10.10.0.4\",34567],\"nonce\":\"published-vnet:trusted-a:untrusted-a:18080:1794857828243834803\"}\n{\"kind\":\"receipt\",\"endpoint\":\"untrusted-a\",\"utc\":\"2026-11-16T19:37:09.858502+00:00\",\"protocol\":\"udp\",\"port\":18082,\"remote\":[\"10.20.0.4\",55357],\"nonce\":\"published-vnet:trusted-b:untrusted-a:18082:1794857829856638457\"}\n{\"kind\":\"receipt\",\"endpoint\":\"untrusted-a\",\"utc\":\"2026-11-16T19:37:12.265637+00:00\",\"protocol\":\"udp\",\"port\":18082,\"remote\":[\"10.10.0.4\",37341],\"nonce\":\"published-vnet:trusted-a:untrusted-a:18082:1794857832262378139\"}\n\n[stderr]\n"
+    }
+  ]
+}

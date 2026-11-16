@@ -1,0 +1,38 @@
+{
+  "id": "/subscriptions/[REDACTED-GUID]/resourcegroups/rg-fw177-20261116-4cf83a/providers/microsoft.network/azurefirewalls/fw-fw177/providers/microsoft.insights/diagnosticSettings/lab-network-rules",
+  "identity": null,
+  "kind": null,
+  "location": null,
+  "name": "lab-network-rules",
+  "properties": {
+    "eventHubAuthorizationRuleId": null,
+    "eventHubName": null,
+    "logAnalyticsDestinationType": "Dedicated",
+    "logs": [
+      {
+        "category": "AzureFirewallNetworkRule",
+        "categoryGroup": null,
+        "enabled": true,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "AZFWNetworkRule",
+        "categoryGroup": null,
+        "enabled": true,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      }
+    ],
+    "metrics": [],
+    "serviceBusRuleId": null,
+    "storageAccountId": null,
+    "workspaceId": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.OperationalInsights/workspaces/logs-fw177-pyyz4umgehhu6"
+  },
+  "tags": null,
+  "type": "Microsoft.Insights/diagnosticSettings"
+}

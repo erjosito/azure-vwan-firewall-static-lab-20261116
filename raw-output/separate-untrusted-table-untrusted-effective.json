@@ -1,0 +1,14 @@
+{
+  "value": [
+    {
+      "addressPrefixes": [
+        "10.0.0.0/8"
+      ],
+      "nextHopType": "Azure Firewall",
+      "nextHops": [
+        "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/azureFirewalls/fw-fw177"
+      ],
+      "routeOrigin": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/untrusted"
+    }
+  ]
+}

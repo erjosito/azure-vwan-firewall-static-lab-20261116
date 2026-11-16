@@ -1,0 +1,107 @@
+{
+  "etag": "[REDACTED-GUID]",
+  "id": "/subscriptions/[REDACTED-GUID]/resourcegroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/firewallPolicies/policy-fw177/ruleCollectionGroups/lab-network-controls",
+  "name": "lab-network-controls",
+  "priority": 100,
+  "provisioningState": "Succeeded",
+  "resourceGroup": "rg-fw177-20261116-4cf83a",
+  "ruleCollections": [
+    {
+      "action": {
+        "type": "Deny"
+      },
+      "name": "explicit-deny-control",
+      "priority": 100,
+      "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
+      "rules": [
+        {
+          "destinationAddresses": [
+            "10.0.0.0/8"
+          ],
+          "destinationFqdns": [],
+          "destinationIpGroups": [],
+          "destinationPorts": [
+            "18081"
+          ],
+          "ipProtocols": [
+            "TCP"
+          ],
+          "name": "deny-tcp-18081",
+          "ruleType": "NetworkRule",
+          "sourceAddresses": [
+            "10.0.0.0/8"
+          ],
+          "sourceIpGroups": []
+        },
+        {
+          "destinationAddresses": [
+            "10.0.0.0/8"
+          ],
+          "destinationFqdns": [],
+          "destinationIpGroups": [],
+          "destinationPorts": [
+            "18083"
+          ],
+          "ipProtocols": [
+            "UDP"
+          ],
+          "name": "deny-udp-18083",
+          "ruleType": "NetworkRule",
+          "sourceAddresses": [
+            "10.0.0.0/8"
+          ],
+          "sourceIpGroups": []
+        }
+      ]
+    },
+    {
+      "action": {
+        "type": "Allow"
+      },
+      "name": "explicit-allow-control",
+      "priority": 200,
+      "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
+      "rules": [
+        {
+          "destinationAddresses": [
+            "10.0.0.0/8"
+          ],
+          "destinationFqdns": [],
+          "destinationIpGroups": [],
+          "destinationPorts": [
+            "18080"
+          ],
+          "ipProtocols": [
+            "TCP"
+          ],
+          "name": "allow-tcp-18080",
+          "ruleType": "NetworkRule",
+          "sourceAddresses": [
+            "10.0.0.0/8"
+          ],
+          "sourceIpGroups": []
+        },
+        {
+          "destinationAddresses": [
+            "10.0.0.0/8"
+          ],
+          "destinationFqdns": [],
+          "destinationIpGroups": [],
+          "destinationPorts": [
+            "18082"
+          ],
+          "ipProtocols": [
+            "UDP"
+          ],
+          "name": "allow-udp-18082",
+          "ruleType": "NetworkRule",
+          "sourceAddresses": [
+            "10.0.0.0/8"
+          ],
+          "sourceIpGroups": []
+        }
+      ]
+    }
+  ],
+  "type": "Microsoft.Network/FirewallPolicies/RuleCollectionGroups"
+}

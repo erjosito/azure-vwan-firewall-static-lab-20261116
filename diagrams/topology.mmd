@@ -1,0 +1,10 @@
+flowchart TB
+  Hub["Standard VWAN hub; intent OFF"]
+  Firewall["Azure Firewall Standard"]
+  A["Trusted A: 10.10.0.0/16"]
+  B["Trusted B: 10.20.0.0/16"]
+  U["Untrusted A: 10.30.0.0/16"]
+  Hub --- A
+  Hub --- B
+  Hub --- U
+  Hub ---|"static 10/8 next hop"| Firewall
