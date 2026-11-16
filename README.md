@@ -52,6 +52,11 @@ nonces/source ports, timestamps and independent destination receipts. Counts
 are observations, **not pass rates**. The second fixture's name denotes its
 table pattern: the live endpoints were still VNets, not hybrid branches.
 
+A separately named `published-vnet-confirmation` replay after the diagnostic
+reset repeated all 24 first-design probes at 20:22 UTC: **16 echoes and 16
+destination receipts**, with the same active-table results. It did not overwrite
+the original observations or predictions. Total measured remote probes: **96**.
+
 - **First design:** trusted/trusted echoed even on explicitly denied ports:
   positive bypass evidence. Cross-domain allow ports echoed; denied ports did
   not. Default's active Azure RIB contained only the Firewall aggregate.
@@ -96,6 +101,13 @@ Default-concurrency testing encountered an unchanged heavy diagnostics timeout
 during concurrent lab work; baseline and isolated fixed-source checks passed.
 No timeout, assertion or production budget was relaxed.
 
+[Fresh app CI](https://github.com/erjosito/vwan-visual-topology/actions/runs/43948115969)
+passed both `validate` and `desktop` on PR source
+`a3256cfe8da787970b16603fcc6702c964bdf584`, including the full browser suite,
+collector tests, production-artifact smoke and packaged offline/desktop-network
+checks. The PR remains unmerged; no new application release or deployment is
+claimed.
+
 ## Instrumentation limits and retained disagreements
 
 **Firewall per-flow logs are not established by this report.** Initial
@@ -119,8 +131,8 @@ Additional boundaries:
   misleading identical snapshots. Authoritative evidence was recollected
   **sequentially**. This observation does not establish an Azure/CLI root cause.
 - Unassociated spare tables returned empty effective RIBs despite configured
-  statics. The simulator precomputes unused tables. Only **active source lookup
-  tables and measured forwarding** are qualified here.
+  statics. The simulator precomputes unused tables. Comparison is limited to
+    **active source lookup tables and measured forwarding**.
 - Azure rejected changing Default's internal lowercase `default` label; the
   scenario template was corrected before the measured runs.
 - Equal-prefix static precedence, HRP, multi-hub, routing intent, arbitrary
@@ -169,8 +181,16 @@ tuples/timestamps; do not conclude bypass from absent records.
 The app's synthetic configurations are in `fixtures/`. To reproduce predictions,
 clone `erjosito/vwan-visual-topology` beside this repo, check out the stated
 baseline or fix, run `npm ci`, bundle `scripts/predict.ts` with that checkout's
-esbuild (`--bundle --platform=node --format=esm`), and set `PREDICTION_SOURCE` to
-the actual commit. Use a **new output filename**, preserving original evidence.
+esbuild, and set `PREDICTION_SOURCE` to the actual commit:
+
+```powershell
+& '..\vwan-visual-topology\node_modules\.bin\esbuild.cmd' scripts\predict.ts `
+  --bundle --platform=node --format=esm --outfile=scripts\predict.mjs
+$env:PREDICTION_SOURCE = git -C '..\vwan-visual-topology' rev-parse HEAD
+node scripts\predict.mjs predictions-replay.json
+```
+
+Use a **new output filename**, preserving original evidence.
 `python scripts\analyze.py` reruns the published evidence checks.
 
 ## Cleanup and cost

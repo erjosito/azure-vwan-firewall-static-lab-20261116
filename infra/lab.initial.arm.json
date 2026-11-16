@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "contentVersion": "[REDACTED-PUBLIC-IP]",
+  "contentVersion": "1.0.0.0",
   "metadata": {
     "_generator": {
       "name": "bicep",
@@ -382,6 +382,23 @@
           "uefiSettings": {
             "secureBootEnabled": true,
             "vTpmEnabled": true
+          }
+        },
+        "osProfile": {
+          "computerName": "[variables('endpoints')[copyIndex()].name]",
+          "adminUsername": "azurelabuser",
+          "customData": "[base64(variables('$fxv#0'))]",
+          "linuxConfiguration": {
+            "disablePasswordAuthentication": true,
+            "provisionVMAgent": true,
+            "ssh": {
+              "publicKeys": [
+                {
+                  "path": "/home/azurelabuser/.ssh/authorized_keys",
+                  "keyData": "[parameters('adminPublicKey')]"
+                }
+              ]
+            }
           }
         },
         "networkProfile": {

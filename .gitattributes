@@ -1,0 +1,2 @@
+* text=auto eol=lf
+infra/lab.initial.arm.json -text whitespace=cr-at-eol

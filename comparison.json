@@ -7872,6 +7872,2624 @@
           ]
         }
       ]
+    },
+    {
+      "design": "published-vnet-confirmation",
+      "probeCount": 24,
+      "receiptCount": 16,
+      "hubEffectiveRoutes": {
+        "defaultRouteTable": [
+          {
+            "addressPrefixes": [
+              "10.0.0.0/8"
+            ],
+            "nextHopType": "Azure Firewall",
+            "nextHops": [
+              "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/azureFirewalls/fw-fw177"
+            ],
+            "routeOrigin": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/defaultRouteTable"
+          }
+        ],
+        "trusted": [
+          {
+            "addressPrefixes": [
+              "10.0.0.0/8"
+            ],
+            "nextHopType": "Azure Firewall",
+            "nextHops": [
+              "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/azureFirewalls/fw-fw177"
+            ],
+            "routeOrigin": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubRouteTables/trusted"
+          },
+          {
+            "addressPrefixes": [
+              "10.20.0.0/16"
+            ],
+            "nextHopType": "Virtual Network Connection",
+            "nextHops": [
+              "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubVirtualNetworkConnections/conn-trusted-b"
+            ],
+            "routeOrigin": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubVirtualNetworkConnections/conn-trusted-b"
+          },
+          {
+            "addressPrefixes": [
+              "10.10.0.0/16"
+            ],
+            "nextHopType": "Virtual Network Connection",
+            "nextHops": [
+              "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubVirtualNetworkConnections/conn-trusted-a"
+            ],
+            "routeOrigin": "/subscriptions/[REDACTED-GUID]/resourceGroups/rg-fw177-20261116-4cf83a/providers/Microsoft.Network/virtualHubs/hub-fw177/hubVirtualNetworkConnections/conn-trusted-a"
+          }
+        ],
+        "untrusted": []
+      },
+      "probes": [
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-a",
+          "target": "trusted-b",
+          "protocol": "tcp",
+          "sourcePort": 49395,
+          "destinationPort": 18080,
+          "utc": "2026-11-16T20:22:17.836701+00:00",
+          "nonce": "published-vnet-confirmation:trusted-a:trusted-b:18080:1794860537836695855",
+          "echo": true,
+          "forwardExpected": "bypassed",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Virtual Network Connection",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.10.0.4",
+              49395
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-a",
+          "target": "trusted-b",
+          "protocol": "tcp",
+          "sourcePort": 46317,
+          "destinationPort": 18081,
+          "utc": "2026-11-16T20:22:17.839941+00:00",
+          "nonce": "published-vnet-confirmation:trusted-a:trusted-b:18081:1794860537839937030",
+          "echo": true,
+          "forwardExpected": "bypassed",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Virtual Network Connection",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.10.0.4",
+              46317
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-a",
+          "target": "trusted-b",
+          "protocol": "udp",
+          "sourcePort": 41153,
+          "destinationPort": 18082,
+          "utc": "2026-11-16T20:22:17.843060+00:00",
+          "nonce": "published-vnet-confirmation:trusted-a:trusted-b:18082:1794860537843058377",
+          "echo": true,
+          "forwardExpected": "bypassed",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Virtual Network Connection",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.10.0.4",
+              41153
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-a",
+          "target": "trusted-b",
+          "protocol": "udp",
+          "sourcePort": 53953,
+          "destinationPort": 18083,
+          "utc": "2026-11-16T20:22:17.845351+00:00",
+          "nonce": "published-vnet-confirmation:trusted-a:trusted-b:18083:1794860537845349581",
+          "echo": true,
+          "forwardExpected": "bypassed",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Virtual Network Connection",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.10.0.4",
+              53953
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-a",
+          "target": "untrusted-a",
+          "protocol": "tcp",
+          "sourcePort": 59943,
+          "destinationPort": 18080,
+          "utc": "2026-11-16T20:22:17.847335+00:00",
+          "nonce": "published-vnet-confirmation:trusted-a:untrusted-a:18080:1794860537847334647",
+          "echo": true,
+          "forwardExpected": "required",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.10.0.4",
+              59943
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-a",
+          "target": "untrusted-a",
+          "protocol": "tcp",
+          "sourcePort": 35347,
+          "destinationPort": 18081,
+          "utc": "2026-11-16T20:22:17.853178+00:00",
+          "nonce": "published-vnet-confirmation:trusted-a:untrusted-a:18081:1794860537853174773",
+          "echo": false,
+          "error": "TimeoutError",
+          "forwardExpected": "required",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": false,
+          "observedGuestPeers": [],
+          "sourceTuplePreserved": false,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-a",
+          "target": "untrusted-a",
+          "protocol": "udp",
+          "sourcePort": 34370,
+          "destinationPort": 18082,
+          "utc": "2026-11-16T20:22:21.856271+00:00",
+          "nonce": "published-vnet-confirmation:trusted-a:untrusted-a:18082:1794860541856266327",
+          "echo": true,
+          "forwardExpected": "required",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.10.0.4",
+              34370
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-a",
+          "target": "untrusted-a",
+          "protocol": "udp",
+          "sourcePort": 41085,
+          "destinationPort": 18083,
+          "utc": "2026-11-16T20:22:21.862916+00:00",
+          "nonce": "published-vnet-confirmation:trusted-a:untrusted-a:18083:1794860541862912457",
+          "echo": false,
+          "error": "TimeoutError",
+          "forwardExpected": "required",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": false,
+          "observedGuestPeers": [],
+          "sourceTuplePreserved": false,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-b",
+          "target": "trusted-a",
+          "protocol": "tcp",
+          "sourcePort": 39689,
+          "destinationPort": 18080,
+          "utc": "2026-11-16T20:22:14.838538+00:00",
+          "nonce": "published-vnet-confirmation:trusted-b:trusted-a:18080:1794860534838511652",
+          "echo": true,
+          "forwardExpected": "bypassed",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Virtual Network Connection",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.20.0.4",
+              39689
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-b",
+          "target": "trusted-a",
+          "protocol": "tcp",
+          "sourcePort": 60799,
+          "destinationPort": 18081,
+          "utc": "2026-11-16T20:22:14.844095+00:00",
+          "nonce": "published-vnet-confirmation:trusted-b:trusted-a:18081:1794860534844092214",
+          "echo": true,
+          "forwardExpected": "bypassed",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Virtual Network Connection",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.20.0.4",
+              60799
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-b",
+          "target": "trusted-a",
+          "protocol": "udp",
+          "sourcePort": 58917,
+          "destinationPort": 18082,
+          "utc": "2026-11-16T20:22:14.847090+00:00",
+          "nonce": "published-vnet-confirmation:trusted-b:trusted-a:18082:1794860534847087519",
+          "echo": true,
+          "forwardExpected": "bypassed",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Virtual Network Connection",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.20.0.4",
+              58917
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-b",
+          "target": "trusted-a",
+          "protocol": "udp",
+          "sourcePort": 50784,
+          "destinationPort": 18083,
+          "utc": "2026-11-16T20:22:14.848363+00:00",
+          "nonce": "published-vnet-confirmation:trusted-b:trusted-a:18083:1794860534848360055",
+          "echo": true,
+          "forwardExpected": "bypassed",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Virtual Network Connection",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.20.0.4",
+              50784
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-b",
+          "target": "untrusted-a",
+          "protocol": "tcp",
+          "sourcePort": 40381,
+          "destinationPort": 18080,
+          "utc": "2026-11-16T20:22:14.849608+00:00",
+          "nonce": "published-vnet-confirmation:trusted-b:untrusted-a:18080:1794860534849605292",
+          "echo": true,
+          "forwardExpected": "required",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.20.0.4",
+              40381
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-b",
+          "target": "untrusted-a",
+          "protocol": "tcp",
+          "sourcePort": 42699,
+          "destinationPort": 18081,
+          "utc": "2026-11-16T20:22:14.863184+00:00",
+          "nonce": "published-vnet-confirmation:trusted-b:untrusted-a:18081:1794860534863181257",
+          "echo": false,
+          "error": "TimeoutError",
+          "forwardExpected": "required",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": false,
+          "observedGuestPeers": [],
+          "sourceTuplePreserved": false,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-b",
+          "target": "untrusted-a",
+          "protocol": "udp",
+          "sourcePort": 33006,
+          "destinationPort": 18082,
+          "utc": "2026-11-16T20:22:18.867425+00:00",
+          "nonce": "published-vnet-confirmation:trusted-b:untrusted-a:18082:1794860538867419968",
+          "echo": true,
+          "forwardExpected": "required",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.20.0.4",
+              33006
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "trusted-b",
+          "target": "untrusted-a",
+          "protocol": "udp",
+          "sourcePort": 54647,
+          "destinationPort": 18083,
+          "utc": "2026-11-16T20:22:18.870479+00:00",
+          "nonce": "published-vnet-confirmation:trusted-b:untrusted-a:18083:1794860538870475651",
+          "echo": false,
+          "error": "TimeoutError",
+          "forwardExpected": "required",
+          "activeLookupTable": "trusted",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": false,
+          "observedGuestPeers": [],
+          "sourceTuplePreserved": false,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "untrusted-a",
+          "target": "trusted-a",
+          "protocol": "tcp",
+          "sourcePort": 42429,
+          "destinationPort": 18080,
+          "utc": "2026-11-16T20:22:18.232027+00:00",
+          "nonce": "published-vnet-confirmation:untrusted-a:trusted-a:18080:1794860538232021021",
+          "echo": true,
+          "forwardExpected": "required",
+          "activeLookupTable": "defaultRouteTable",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.30.0.4",
+              42429
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "untrusted-a",
+          "target": "trusted-a",
+          "protocol": "tcp",
+          "sourcePort": 35167,
+          "destinationPort": 18081,
+          "utc": "2026-11-16T20:22:18.237162+00:00",
+          "nonce": "published-vnet-confirmation:untrusted-a:trusted-a:18081:1794860538237160068",
+          "echo": false,
+          "error": "TimeoutError",
+          "forwardExpected": "required",
+          "activeLookupTable": "defaultRouteTable",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": false,
+          "observedGuestPeers": [],
+          "sourceTuplePreserved": false,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "untrusted-a",
+          "target": "trusted-a",
+          "protocol": "udp",
+          "sourcePort": 35394,
+          "destinationPort": 18082,
+          "utc": "2026-11-16T20:22:22.241386+00:00",
+          "nonce": "published-vnet-confirmation:untrusted-a:trusted-a:18082:1794860542241381526",
+          "echo": true,
+          "forwardExpected": "required",
+          "activeLookupTable": "defaultRouteTable",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.30.0.4",
+              35394
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "untrusted-a",
+          "target": "trusted-a",
+          "protocol": "udp",
+          "sourcePort": 37513,
+          "destinationPort": 18083,
+          "utc": "2026-11-16T20:22:22.245172+00:00",
+          "nonce": "published-vnet-confirmation:untrusted-a:trusted-a:18083:1794860542245169376",
+          "echo": false,
+          "error": "TimeoutError",
+          "forwardExpected": "required",
+          "activeLookupTable": "defaultRouteTable",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": false,
+          "observedGuestPeers": [],
+          "sourceTuplePreserved": false,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "untrusted-a",
+          "target": "trusted-b",
+          "protocol": "tcp",
+          "sourcePort": 33137,
+          "destinationPort": 18080,
+          "utc": "2026-11-16T20:22:26.247957+00:00",
+          "nonce": "published-vnet-confirmation:untrusted-a:trusted-b:18080:1794860546247952641",
+          "echo": true,
+          "forwardExpected": "required",
+          "activeLookupTable": "defaultRouteTable",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.30.0.4",
+              33137
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "untrusted-a",
+          "target": "trusted-b",
+          "protocol": "tcp",
+          "sourcePort": 38987,
+          "destinationPort": 18081,
+          "utc": "2026-11-16T20:22:26.262183+00:00",
+          "nonce": "published-vnet-confirmation:untrusted-a:trusted-b:18081:1794860546262174378",
+          "echo": false,
+          "error": "TimeoutError",
+          "forwardExpected": "required",
+          "activeLookupTable": "defaultRouteTable",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": false,
+          "observedGuestPeers": [],
+          "sourceTuplePreserved": false,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "untrusted-a",
+          "target": "trusted-b",
+          "protocol": "udp",
+          "sourcePort": 42156,
+          "destinationPort": 18082,
+          "utc": "2026-11-16T20:22:30.262817+00:00",
+          "nonce": "published-vnet-confirmation:untrusted-a:trusted-b:18082:1794860550262812924",
+          "echo": true,
+          "forwardExpected": "required",
+          "activeLookupTable": "defaultRouteTable",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": true,
+          "observedGuestPeers": [
+            [
+              "10.30.0.4",
+              42156
+            ]
+          ],
+          "sourceTuplePreserved": true,
+          "forwardFirewallEvents": []
+        },
+        {
+          "kind": "probe",
+          "design": "published-vnet-confirmation",
+          "source": "untrusted-a",
+          "target": "trusted-b",
+          "protocol": "udp",
+          "sourcePort": 60855,
+          "destinationPort": 18083,
+          "utc": "2026-11-16T20:22:30.266284+00:00",
+          "nonce": "published-vnet-confirmation:untrusted-a:trusted-b:18083:1794860550266281692",
+          "echo": false,
+          "error": "TimeoutError",
+          "forwardExpected": "required",
+          "activeLookupTable": "defaultRouteTable",
+          "azureSelectedNextHopType": "Azure Firewall",
+          "forwardGuestReceived": false,
+          "observedGuestPeers": [],
+          "sourceTuplePreserved": false,
+          "forwardFirewallEvents": []
+        }
+      ],
+      "originalModelAssessments": [
+        {
+          "source": "trusted-a",
+          "target": "trusted-b",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "satisfied",
+              "findings": [
+                {
+                  "id": "reachable:534e94ec3d658e1c",
+                  "rule": "reachable",
+                  "severity": "info",
+                  "confidence": "modeled",
+                  "title": "Required flow is modeled reachable",
+                  "detail": "Every selected branch reaches the declared owner in both directions. No traffic hash or application success is predicted.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-a-trusted-b"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "sourceAddress": "10.10.0.4",
+                  "destinationAddress": "10.20.0.4",
+                  "prefix": "10.20.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "satisfied"
+            }
+          ]
+        },
+        {
+          "source": "trusted-a",
+          "target": "untrusted-a",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "violated",
+              "findings": [
+                {
+                  "id": "asymmetric:4220336c98cfe5dc",
+                  "rule": "asymmetric",
+                  "severity": "warning",
+                  "confidence": "risk",
+                  "title": "Asymmetric physical path sets",
+                  "detail": "Forward physical paths and reversed return paths differ. Asymmetry alone is not a demonstrated fault; ECMP hash pairing is unknown.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-a-untrusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "sourceAddress": "10.10.0.4",
+                  "destinationAddress": "10.30.0.4",
+                  "prefix": "10.30.0.4/32"
+                },
+                {
+                  "id": "firewall:4220336c98cfe5dc",
+                  "rule": "firewall",
+                  "severity": "error",
+                  "confidence": "modeled",
+                  "title": "Firewall inspection requirement is not met",
+                  "detail": "A selected path does not match the required or bypassed Firewall predicate for its direction. Routing evidence does not prove Firewall permission or session establishment.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-a-untrusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "sourceAddress": "10.10.0.4",
+                  "destinationAddress": "10.30.0.4",
+                  "prefix": "10.30.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "violated"
+            }
+          ]
+        },
+        {
+          "source": "trusted-b",
+          "target": "trusted-a",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "satisfied",
+              "findings": [
+                {
+                  "id": "reachable:84e9d77c1723b4dc",
+                  "rule": "reachable",
+                  "severity": "info",
+                  "confidence": "modeled",
+                  "title": "Required flow is modeled reachable",
+                  "detail": "Every selected branch reaches the declared owner in both directions. No traffic hash or application success is predicted.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-b-trusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "sourceAddress": "10.20.0.4",
+                  "destinationAddress": "10.10.0.4",
+                  "prefix": "10.10.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "satisfied"
+            }
+          ]
+        },
+        {
+          "source": "trusted-b",
+          "target": "untrusted-a",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "violated",
+              "findings": [
+                {
+                  "id": "asymmetric:68eaa364dd37c7dc",
+                  "rule": "asymmetric",
+                  "severity": "warning",
+                  "confidence": "risk",
+                  "title": "Asymmetric physical path sets",
+                  "detail": "Forward physical paths and reversed return paths differ. Asymmetry alone is not a demonstrated fault; ECMP hash pairing is unknown.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-b-untrusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "sourceAddress": "10.20.0.4",
+                  "destinationAddress": "10.30.0.4",
+                  "prefix": "10.30.0.4/32"
+                },
+                {
+                  "id": "firewall:68eaa364dd37c7dc",
+                  "rule": "firewall",
+                  "severity": "error",
+                  "confidence": "modeled",
+                  "title": "Firewall inspection requirement is not met",
+                  "detail": "A selected path does not match the required or bypassed Firewall predicate for its direction. Routing evidence does not prove Firewall permission or session establishment.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-b-untrusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "sourceAddress": "10.20.0.4",
+                  "destinationAddress": "10.30.0.4",
+                  "prefix": "10.30.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "violated"
+            }
+          ]
+        },
+        {
+          "source": "untrusted-a",
+          "target": "trusted-a",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "violated",
+              "findings": [
+                {
+                  "id": "asymmetric:6bc3f724b26d0fc",
+                  "rule": "asymmetric",
+                  "severity": "warning",
+                  "confidence": "risk",
+                  "title": "Asymmetric physical path sets",
+                  "detail": "Forward physical paths and reversed return paths differ. Asymmetry alone is not a demonstrated fault; ECMP hash pairing is unknown.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-untrusted-a-trusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "sourceAddress": "10.30.0.4",
+                  "destinationAddress": "10.10.0.4",
+                  "prefix": "10.10.0.4/32"
+                },
+                {
+                  "id": "firewall:6bc3f724b26d0fc",
+                  "rule": "firewall",
+                  "severity": "error",
+                  "confidence": "modeled",
+                  "title": "Firewall inspection requirement is not met",
+                  "detail": "A selected path does not match the required or bypassed Firewall predicate for its direction. Routing evidence does not prove Firewall permission or session establishment.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-untrusted-a-trusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "sourceAddress": "10.30.0.4",
+                  "destinationAddress": "10.10.0.4",
+                  "prefix": "10.10.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "violated"
+            }
+          ]
+        },
+        {
+          "source": "untrusted-a",
+          "target": "trusted-b",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "violated",
+              "findings": [
+                {
+                  "id": "asymmetric:b8c857821b7b81bc",
+                  "rule": "asymmetric",
+                  "severity": "warning",
+                  "confidence": "risk",
+                  "title": "Asymmetric physical path sets",
+                  "detail": "Forward physical paths and reversed return paths differ. Asymmetry alone is not a demonstrated fault; ECMP hash pairing is unknown.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-untrusted-a-trusted-b"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "sourceAddress": "10.30.0.4",
+                  "destinationAddress": "10.20.0.4",
+                  "prefix": "10.20.0.4/32"
+                },
+                {
+                  "id": "firewall:b8c857821b7b81bc",
+                  "rule": "firewall",
+                  "severity": "error",
+                  "confidence": "modeled",
+                  "title": "Firewall inspection requirement is not met",
+                  "detail": "A selected path does not match the required or bypassed Firewall predicate for its direction. Routing evidence does not prove Firewall permission or session establishment.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-untrusted-a-trusted-b"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "sourceAddress": "10.30.0.4",
+                  "destinationAddress": "10.20.0.4",
+                  "prefix": "10.20.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "violated"
+            }
+          ]
+        }
+      ],
+      "fixedModelAssessments": [
+        {
+          "source": "trusted-a",
+          "target": "trusted-b",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "satisfied",
+              "findings": [
+                {
+                  "id": "reachable:534e94ec3d658e1c",
+                  "rule": "reachable",
+                  "severity": "info",
+                  "confidence": "modeled",
+                  "title": "Required flow is modeled reachable",
+                  "detail": "Every selected branch reaches the declared owner in both directions. No traffic hash or application success is predicted.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-a-trusted-b"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "sourceAddress": "10.10.0.4",
+                  "destinationAddress": "10.20.0.4",
+                  "prefix": "10.20.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "satisfied"
+            }
+          ]
+        },
+        {
+          "source": "trusted-a",
+          "target": "untrusted-a",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "satisfied",
+              "findings": [
+                {
+                  "id": "reachable:4220336c98cfe5dc",
+                  "rule": "reachable",
+                  "severity": "info",
+                  "confidence": "modeled",
+                  "title": "Required flow is modeled reachable",
+                  "detail": "Every selected branch reaches the declared owner in both directions. No traffic hash or application success is predicted.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-a-untrusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "sourceAddress": "10.10.0.4",
+                  "destinationAddress": "10.30.0.4",
+                  "prefix": "10.30.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "satisfied"
+            }
+          ]
+        },
+        {
+          "source": "trusted-b",
+          "target": "trusted-a",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "satisfied",
+              "findings": [
+                {
+                  "id": "reachable:84e9d77c1723b4dc",
+                  "rule": "reachable",
+                  "severity": "info",
+                  "confidence": "modeled",
+                  "title": "Required flow is modeled reachable",
+                  "detail": "Every selected branch reaches the declared owner in both directions. No traffic hash or application success is predicted.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-b-trusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "sourceAddress": "10.20.0.4",
+                  "destinationAddress": "10.10.0.4",
+                  "prefix": "10.10.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "satisfied"
+            }
+          ]
+        },
+        {
+          "source": "trusted-b",
+          "target": "untrusted-a",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "satisfied",
+              "findings": [
+                {
+                  "id": "reachable:68eaa364dd37c7dc",
+                  "rule": "reachable",
+                  "severity": "info",
+                  "confidence": "modeled",
+                  "title": "Required flow is modeled reachable",
+                  "detail": "Every selected branch reaches the declared owner in both directions. No traffic hash or application success is predicted.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-trusted-b-untrusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "sourceAddress": "10.20.0.4",
+                  "destinationAddress": "10.30.0.4",
+                  "prefix": "10.30.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "satisfied"
+            }
+          ]
+        },
+        {
+          "source": "untrusted-a",
+          "target": "trusted-a",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "satisfied",
+              "findings": [
+                {
+                  "id": "reachable:6bc3f724b26d0fc",
+                  "rule": "reachable",
+                  "severity": "info",
+                  "confidence": "modeled",
+                  "title": "Required flow is modeled reachable",
+                  "detail": "Every selected branch reaches the declared owner in both directions. No traffic hash or application success is predicted.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-a"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "trusted-a",
+                      "siteId": "trusted-a",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.10.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.10.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-a"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-untrusted-a-trusted-a"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.10.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-a",
+                      "connectionId": "trusted-a",
+                      "prefix": "10.10.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-a"
+                  },
+                  "sourceAddress": "10.30.0.4",
+                  "destinationAddress": "10.10.0.4",
+                  "prefix": "10.10.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "satisfied"
+            }
+          ]
+        },
+        {
+          "source": "untrusted-a",
+          "target": "trusted-b",
+          "parity": [
+            {
+              "mode": "vwan",
+              "outcome": "satisfied",
+              "findings": [
+                {
+                  "id": "reachable:b8c857821b7b81bc",
+                  "rule": "reachable",
+                  "severity": "info",
+                  "confidence": "modeled",
+                  "title": "Required flow is modeled reachable",
+                  "detail": "Every selected branch reaches the declared owner in both directions. No traffic hash or application success is predicted.",
+                  "related": [
+                    {
+                      "kind": "hub",
+                      "id": "hub-local"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "trusted-b"
+                    },
+                    {
+                      "kind": "spoke",
+                      "id": "untrusted-a"
+                    }
+                  ],
+                  "forward": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "trusted-b",
+                      "siteId": "trusted-b",
+                      "steps": [
+                        "Local secure hub: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.20.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via trusted-b."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.20.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "defaultRouteTable"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "untrusted-a"
+                    }
+                  ],
+                  "reverse": [
+                    {
+                      "hubs": [
+                        "hub-local"
+                      ],
+                      "firewalls": [
+                        "hub-local"
+                      ],
+                      "connectionId": "untrusted-a",
+                      "siteId": "untrusted-a",
+                      "steps": [
+                        "Local secure hub [trusted]: longest prefix 10.0.0.0/8. Only available path, or all paths have equal modeled preference.",
+                        "Azure Firewall in Local secure hub (Original local Firewall, fw-local): separate onward lookup, longest prefix 10.30.0.0/16. Only available path, or all paths have equal modeled preference.",
+                        "Exit via untrusted-a."
+                      ],
+                      "status": "delivered",
+                      "termination": "owner",
+                      "terminalKind": "spoke",
+                      "lookupPrefix": "10.30.0.0/16",
+                      "hubContexts": [
+                        {
+                          "hubId": "hub-local",
+                          "tableId": "trusted"
+                        }
+                      ],
+                      "traceComplete": true,
+                      "sourceSpokeId": "trusted-b"
+                    }
+                  ],
+                  "evidence": [
+                    {
+                      "code": "intent",
+                      "nodeId": "published-vnet-untrusted-a-trusted-b"
+                    },
+                    {
+                      "code": "source-cell",
+                      "prefix": "10.30.0.4/32"
+                    },
+                    {
+                      "code": "destination-cell",
+                      "prefix": "10.20.0.4/32"
+                    },
+                    {
+                      "code": "forward:owner",
+                      "nodeId": "trusted-b",
+                      "connectionId": "trusted-b",
+                      "prefix": "10.20.0.0/16"
+                    },
+                    {
+                      "code": "reverse:owner",
+                      "nodeId": "untrusted-a",
+                      "connectionId": "untrusted-a",
+                      "prefix": "10.30.0.0/16"
+                    }
+                  ],
+                  "source": {
+                    "kind": "spoke",
+                    "id": "untrusted-a"
+                  },
+                  "target": {
+                    "kind": "spoke",
+                    "id": "trusted-b"
+                  },
+                  "sourceAddress": "10.30.0.4",
+                  "destinationAddress": "10.20.0.4",
+                  "prefix": "10.20.0.4/32"
+                }
+              ]
+            },
+            {
+              "mode": "full",
+              "outcome": "satisfied"
+            }
+          ]
+        }
+      ]
     }
   ],
   "firewallLogRows": 0

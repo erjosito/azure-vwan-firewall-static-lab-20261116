@@ -1,0 +1,10 @@
+.env
+*.private.json
+*.parameters.json
+parameters.json
+params.json
+*.pem
+*.key
+node_modules/
+__pycache__/
+scripts/predict.mjs
