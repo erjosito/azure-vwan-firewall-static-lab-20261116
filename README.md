@@ -199,8 +199,12 @@ Only the previously absent, ownership-tagged task resource group and its
 task-created resources are eligible for deletion. The preview contained the
 WAN/hub, Firewall/policy, workspace, NSG, three VNet/NIC/VM/disk sets and
 subscription-policy-installed MDE extensions. No pre-existing resources were
-included. Final absence/orphan verification is recorded separately in
-`cleanup-result.json` when complete; an in-progress deletion is not proof.
+included. **Cleanup was verified at 20:58:21 UTC on 2026-11-16**: the task
+resource group is absent and no correlation-tagged orphan resources remain.
+See [absence verification](cleanup-result.json) and the
+[empty orphan check](raw-output/cleanup-orphan-check.json). Deletion was
+submitted at 20:25 UTC; its long-running Firewall/hub lifecycle was allowed to
+finish before claiming success. No pre-existing resources were deleted.
 
 User approval included charges and task-owned cleanup. Under US$25 was a target,
 not a hard cap or an actual bill. Public Sweden Central Firewall retail meters

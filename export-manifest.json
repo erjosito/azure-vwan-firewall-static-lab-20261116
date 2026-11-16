@@ -4,6 +4,7 @@
   "files": [
     ".gitattributes",
     ".gitignore",
+    "cleanup-result.json",
     "cleanup-start.json",
     "comparison.json",
     "diagrams/azure-firewall.svg",
@@ -29,6 +30,7 @@
     "predictions-after-fix.json",
     "predictions-before-azure.json",
     "raw-output/cleanup-inventory.json",
+    "raw-output/cleanup-orphan-check.json",
     "raw-output/diagnostics-structured-update.json",
     "raw-output/firewall-controls-final.json",
     "raw-output/firewall-controls-original.json",
